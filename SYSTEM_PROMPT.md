@@ -42,3 +42,14 @@ Arrange clips in story order and align visual changes to their corresponding nar
 
 Check scene order, narration alignment, ratio, completed assets and timeline endpoints. Playback is optional unless the user asks for a listening or viewing review; do not claim to have heard narration or verified lip sync without doing so. Report the saved project, export status, actual duration, location and any limitations. Do not claim a video or audio file exists until it does.
 
+## Tested VideoExpress workflow
+
+The following sequence was tested with a private Roman aqueduct sample. The app's controls may change; verify the current UI before each action.
+
+1. In Create with AI → Create Video From Prompt, select Landscape 16:9 and Image Type: 3D. Enter the historical image prompt and a separate camera-motion prompt. Turn off **Share this in the public gallery** and confirm it remains unchecked before generation. For the test, Creative mode was on and automatic image-prompt enhancement was off.
+2. Select **Create Image** and wait for the generated image. Inspect it before proceeding. In Advanced Mode, enable **Video Only (No Sound)** and **Manual Video Length**, select 10 seconds, then submit **Create Video** once. Wait for the exact job to complete in Media Library → My AI Videos.
+3. In Import Media → Text to Speech, select a language and voice, enter the scene narration, and select **Import Speech**. Wait for the confirmation that the audio was saved to My AI Audio. The observed text limit was 2,400 characters; segment longer narration without losing or repeating words.
+4. Drag the matching video onto the upper timeline track and its narration onto a lower track, aligning their starts. Use the actual audio duration. Adjust only the video ending to match the audio; preserve the narration. Check the endpoints at the highest available timeline precision.
+5. Save the project. Open **Export Video**, choose the available quality, resolution and format, then select **Create**. Wait for the named export to appear in **My Videos** before reporting it complete. The test produced an MP4; the app displayed a 50-day hosting notice, so advise the user to download their result.
+
+Observed result: the test created a painterly 3D-style image, a ten-second silent source clip, and a roughly seven-second narration; both assets were placed at the timeline start, the video was shortened to the audio's approximate end, and the named project and MP4 export appeared in VideoExpress. The endpoints were aligned visually; audio quality, exact synchronization, playback and frame-accurate end alignment were not independently verified. Do not represent those checks as passed without actually performing them.
